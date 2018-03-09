@@ -9,4 +9,13 @@ export class AppComponent {
   title = 'Acl-Demo-Aplicacion';
   a = 3;
   b = 8;
+  listo = false;
+
+
+  constructor(){
+  	setTimeout(()=>{
+  		this.listo = true;
+  	},3000);
+  }
 }
+
