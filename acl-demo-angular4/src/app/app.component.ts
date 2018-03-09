@@ -17,10 +17,13 @@ export class AppComponent {
   		this.listo = true;
   	},3000);
   }
+<<<<<<< HEAD
 
   //Funcion de prueba de event binding
   hacerAlgo(){
   	alert("Haciendo algo");
   }
+=======
+>>>>>>> 1079f0cc1e629de7926df79b74867a26ac3ab11f
 }
 
