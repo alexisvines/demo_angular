@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Acl-Demo-Aplicacion';
+  lat = -33.423489;
+  lng = -70.6106597;
   lugares:any = [
   	{plan:'pagado', cercania:1,distancia: 1, active:true,  nombre: 'Santiago'},
   	{plan:'gratuito', cercania:1,distancia: 1.8, active:false, nombre: 'San antonio'},
@@ -23,5 +25,6 @@ export class AppComponent {
   constructor(){  	
   }
   
+
 }
 

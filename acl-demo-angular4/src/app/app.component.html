@@ -1,4 +1,10 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
+
+<hr />
+
 <ul>
 	<ng-container *ngFor="let lugar of lugares">
 		<li *ngIf="lugar.active">{{lugar.nombre}} </li>
@@ -13,5 +19,13 @@
 			<span *ngSwitchCase="2" [ngStyle]="{color: 'black'}">Cercano</span>
 			<span *ngSwitchCase="3" [ngStyle]="{color: 'red'}">Lejano</span>
 		 </li></a>
+	</ng-container>
+</ul>
+
+<hr />
+
+<ul>
+	<ng-container *ngFor="let area of areas">
+		<li *ngIf="area.active">{{area.nombre}} </li>
 	</ng-container>
 </ul>
