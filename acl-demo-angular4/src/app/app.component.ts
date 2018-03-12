@@ -5,22 +5,18 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+
 export class AppComponent {
   title = 'Acl-Demo-Aplicacion';
-  a = 3;
-  b = 8;
-  listo = false;
+  areas:any = [
+  	{nombre: 'Software Developer'},
+  	{nombre: 'Outsourcing'},
+  	{nombre: 'Project Management'},
+  ];
 
 
-  constructor(){
-  	setTimeout(()=>{
-  		this.listo = true;
-  	},3000);
+  constructor(){  	
   }
   
-  //Funcion de prueba de event binding
-  hacerAlgo(){
-  	alert("Haciendo algo");
-  }
 }
 
