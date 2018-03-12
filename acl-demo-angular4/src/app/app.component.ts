@@ -9,9 +9,9 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Acl-Demo-Aplicacion';
   areas:any = [
-  	{nombre: 'Software Developer'},
-  	{nombre: 'Outsourcing'},
-  	{nombre: 'Project Management'},
+  	{active:true, nombre: 'Software Developer'},
+  	{active:true, nombre: 'Outsourcing'},
+  	{active:false, nombre: 'Project Management'},
   ];
 
 

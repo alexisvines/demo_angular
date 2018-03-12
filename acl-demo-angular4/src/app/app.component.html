@@ -1,4 +1,6 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <ul>
-	<li *ngFor="let area of areas">{{area.nombre}}</li>
+	<ng-container *ngFor="let area of areas">
+		<li *ngIf="area.active">{{area.nombre}} </li>
+	</ng-container>
 </ul>
