@@ -7,20 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Acl-Demo-Aplicacion';
-  a = 3;
-  b = 8;
-  listo = false;
+  lat = -33.423489;
+  lng = -70.6106597;
 
 
   constructor(){
-  	setTimeout(()=>{
-  		this.listo = true;
-  	},3000);
   }
-  
-  //Funcion de prueba de event binding
-  hacerAlgo(){
-  	alert("Haciendo algo");
-  }
+ 
 }
 

@@ -1,13 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
- <h2>
-   {{a+b}}
- </h2>
+
+
+<agm-map [latitude]="lat" [longitude]="lng">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
 
 <hr />
 
-<button [disabled]="!listo" (click)="hacerAlgo()">Clickea!</button>
-
+<ul>
+	<ng-container *ngFor="let area of areas">
+		<li *ngIf="area.active">{{area.nombre}} </li>
+	</ng-container>
+</ul>
