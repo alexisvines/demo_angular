@@ -8,10 +8,15 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'Acl-Demo-Aplicacion';
-  areas:any = [
-  	{active:true, nombre: 'Software Developer'},
-  	{active:true, nombre: 'Outsourcing'},
-  	{active:false, nombre: 'Project Management'},
+  lugares:any = [
+  	{active:true, nombre: 'Santiago'},
+  	{active:false, nombre: 'San antonio'},
+  	{active:true, nombre: 'Temuco'},
+  	{active:true, nombre: 'Validivia'},
+  	{active:true, nombre: 'Talcahuano'},
+  	{active:true, nombre: 'Arica'},
+  	{active:true, nombre: 'Iquique'},
+
   ];
 
 
