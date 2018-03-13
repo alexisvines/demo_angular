@@ -5,19 +5,37 @@ import { ContarClicksDirective } from './directives/contar-clicks.directive';
 import { FormsModule } from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
+import { Routes, RouterModule } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DetalleComponent } from './detalle/detalle.component';
+import { LugaresComponent } from './lugares/lugares.component';
+import { ContactoComponent } from './contacto/contacto.component';
+
+const appRoutes: Routes = [
+	{path:'', component:LugaresComponent},
+	{path:'lugares', component:LugaresComponent},
+	{path:'detalle/:id', component:DetalleComponent},
+  {path:'contacto', component:ContactoComponent}
+]
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ResaltarDirective,
-    ContarClicksDirective
+    ContarClicksDirective,
+    DetalleComponent,
+    LugaresComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAqVGfohzPaJaGMGrOSPCR9eAASVQVNFN4'
-    })
+    }),
+    BrowserAnimationsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
