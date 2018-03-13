@@ -1,6 +1,7 @@
 import {Injectable} from "@angular/core";
 import {AngularFireDatabase } from "angularfire2/database/database"
-
+import { Http } from "@angular/http";
+ 
 @Injectable()
 export class LugaresService{
 	
@@ -14,7 +15,7 @@ lugares:any = [
   	{id:7,plan:'gratuito', cercania:3,distancia: 120, active:false, nombre: 'Iquique',descripcion: 'descripcion de prueba para mostrar en la pantalla'}
 ];
 
-constructor(private afBD:AngularFireDatabase){
+constructor(private afBD:AngularFireDatabase,private http: Http){
 
 }
 
@@ -30,5 +31,17 @@ public getLugares(){
  	this.afBD.database.ref('lugares/'+lugar.id).set(lugar);
  }
 
+ public editarLugar(lugar){
+ 	this.afBD.database.ref('lugares/'+lugar.id).set(lugar);
+ }
+
+public getLugar(id){
+ 	return this.afBD.object('lugares/'+id);
+ }
+
+ public obtenerGeodata(direccion){
+ 	//http://maps.google.com/maps/api/geocode/json?address=78-43+diagonal+70f,+Bogota,Colombia
+ 	return this.http.get('http://maps.google.com/maps/api/geocode/json?address='+ direccion);
+ }
 
 }

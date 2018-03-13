@@ -15,7 +15,6 @@ export class LugaresComponent {
        lugaresService.getLugares()
        			.valueChanges()
        			.subscribe(lugares=>{
-       				debugger;
        				this.lugares = lugares;
        			});
 
