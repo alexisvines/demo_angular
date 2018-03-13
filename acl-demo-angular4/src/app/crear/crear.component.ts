@@ -29,7 +29,6 @@ export class CrearComponent {
  			.subscribe(result=>{
        				this.lugar.lat = result.json().results['0'].geometry.location.lat;
 		 			this.lugar.lng = result.json().results['0'].geometry.location.lng;
-		 			this.lugar.id = Date.now();
 
 		 			if(this.id != 'new'){
 		 				this.lugaresService.editarLugar(this.lugar);
