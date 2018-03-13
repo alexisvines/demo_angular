@@ -10,7 +10,15 @@ export class LugaresComponent {
   lat = -33.423489;
   lng = -70.6106597;
   lugares = null;
+
     constructor(private lugaresService: LugaresService){
-       this.lugares = lugaresService.getLugares();
+       lugaresService.getLugares()
+       			.valueChanges()
+       			.subscribe(lugares=>{
+       				debugger;
+       				this.lugares = lugares;
+       			});
+
   }
+
 }

@@ -19,7 +19,7 @@ constructor(private afBD:AngularFireDatabase){
 }
 
 public getLugares(){
-	return this.lugares;
+	return this.afBD.list('lugares/');
 }
 
  public buscarLugar(id){
@@ -27,8 +27,7 @@ public getLugares(){
  }
 
  public guardarLugar(lugar){
- 	console.log(lugar);
- 	this.afBD.database.ref('lugares/1').set(lugar);
+ 	this.afBD.database.ref('lugares/'+lugar.id).set(lugar);
  }
 
 
