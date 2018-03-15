@@ -5,7 +5,7 @@ import{ AngularFireAuth } from "angularfire2/auth/auth";
  export class AutorizacionService{
 
  	constructor(private angularFireAuth:AngularFireAuth){
-
+ 		this.isLogged();
  	}
  	
  	// Formato de declaracon de typescript
@@ -33,5 +33,10 @@ import{ AngularFireAuth } from "angularfire2/auth/auth";
  			alert("Un error ha ocurrido");
  			console.log(error);
  		})
+ 	}
+
+
+ 	public isLogged(){
+ 		return this.angularFireAuth.authState;
  	}
  }

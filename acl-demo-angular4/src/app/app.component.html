@@ -15,7 +15,7 @@
         <a class="nav-link" routerLink="/contacto">Contacto <span class="sr-only">(current)</span></a>
       </li> 
     </ul>
-      <ul class="navbar-brand">
+      <ul class="navbar-brand" *ngIf="!loggedIn">
        <li><a routerLink="/login">Login</a></li>
        <li><a routerLink="/registro">Registro</a></li> 
      </ul>

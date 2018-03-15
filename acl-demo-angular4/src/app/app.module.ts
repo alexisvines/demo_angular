@@ -20,6 +20,7 @@ import { LoginComponent } from './login/login.component';
 import { RegistroComponent} from './registro/registro.component';
 import { AutorizacionService} from './services/autorizacion.services';
 import { LugaresService } from './services/lugares.services';
+import { MyGuard } from './services/my-guard-services';
 
 
 const appRoutes: Routes = [
@@ -27,7 +28,7 @@ const appRoutes: Routes = [
 	{path:'lugares', component:LugaresComponent},
 	{path:'detalle/:id', component:DetalleComponent},
   {path:'contacto', component:ContactoComponent},
-  {path:'crear/:id', component:CrearComponent},
+  {path:'crear/:id', component:CrearComponent, canActivate:[MyGuard]},
   {path:'login', component:LoginComponent},
   {path:'registro', component:RegistroComponent}
 ]
@@ -67,7 +68,7 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     HttpModule
   ],
-  providers: [LugaresService, AutorizacionService],
+  providers: [LugaresService, AutorizacionService,MyGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
