@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import {AutorizacionService} from "./services/autorizacion.services";
-import { Observable} from 'rxjs';
-import 'rxjs/Rx';
+
 
 
 @Component({

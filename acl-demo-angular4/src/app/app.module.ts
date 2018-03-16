@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ResaltarDirective } from './directives/resaltar.directive';
 import { ContarClicksDirective } from './directives/contar-clicks.directive';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { AgmCoreModule } from '@agm/core';
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
@@ -66,7 +66,8 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    HttpModule
+    HttpModule,
+    ReactiveFormsModule
   ],
   providers: [LugaresService, AutorizacionService,MyGuard],
   bootstrap: [AppComponent]
