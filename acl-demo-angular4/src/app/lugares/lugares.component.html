@@ -23,8 +23,14 @@
 					</ng-container>
 				</ul>
 			</div>
-			<div class ="col-md-4">
+			 <div class="col-md-4">
 				<h2>Destacados </h2>
+				 <ng-container *ngFor="let lugar of lugares">
+                <div class="bg-warning padding" *ngIf="lugar.plan == 'pagado'">
+                    <a routerLink="/crear/{{lugar.id}}"><h3>{{lugar.nombre}}</h3></a>
+                    <p [innerHtml]="lugar.descripcion | linkifystr"></p>
+                </div>
+            </ng-container>
 			</div>
 	</div>
 </div>

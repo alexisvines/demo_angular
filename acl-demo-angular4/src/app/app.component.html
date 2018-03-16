@@ -15,10 +15,14 @@
         <a class="nav-link" routerLink="/contacto">Contacto <span class="sr-only">(current)</span></a>
       </li> 
     </ul>
-      <ul class="navbar-brand" *ngIf="!loggedIn">
+    <ul class="navbar-brand" *ngIf="!loggedIn">
        <li><a routerLink="/login">Login</a></li>
        <li><a routerLink="/registro">Registro</a></li> 
      </ul>
+     <ul class="navbar-brand" *ngIf="loggedIn">
+        <li><a> Bienvenido {{email}}</a></li>
+       <li><a (click)="logout()">Logout</a></li>
+     </ul>0
   </div>
 </nav>
 <router-outlet></router-outlet>
